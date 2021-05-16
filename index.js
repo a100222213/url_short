@@ -5,6 +5,7 @@ var pg = require('pg-promise')();
 
 var app = express();
 //var db = pg(process.env.DATABASE_URL || 'postgres://psql:psql@localhost');
+pg.pg.defaults.ssl = true;
 var db = pg('postgres://znxcteylejwekj:9b2793e628e1fb31cd6e4d0c99b6d6c6fe81d00fb12f02ec7d49e8e37c097756@ec2-3-234-85-177.compute-1.amazonaws.com:5432/d4ak8q7t4ilhm5?ssl=false');
 
 app.set('port', (process.env.PORT || 3000));
