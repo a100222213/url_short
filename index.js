@@ -4,7 +4,8 @@ var random = require('random-key');
 var pg = require('pg-promise')();
 
 var app = express();
-var db = pg(process.env.DATABASE_URL || 'postgres://psql:psql@localhost');
+//var db = pg(process.env.DATABASE_URL || 'postgres://psql:psql@localhost');
+var db = pg(process.env.DATABASE_URL);
 
 app.set('port', (process.env.PORT || 3000));
 
